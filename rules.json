@@ -1,0 +1,36 @@
+RULES_JSON = '''{
+  "file_rules": [
+    {
+      "id": "ransomware_detection",
+      "name": "Rapid File Encryption",
+      "threshold": 10,
+      "time_window": 60,
+      "severity": "critical"
+    },
+    {
+      "id": "executable_temp",
+      "name": "Executable in Temp Directory",
+      "severity": "high"
+    }
+  ],
+  "process_rules": [
+    {
+      "id": "suspicious_powershell",
+      "name": "Suspicious PowerShell Activity",
+      "patterns": ["powershell -enc", "downloadstring"],
+      "severity": "high"
+    }
+  ],
+  "network_rules": [
+    {
+      "id": "malicious_ip",
+      "name": "Connection to Malicious IP",
+      "severity": "critical"
+    }
+  ]
+}'''
+
+# Save rules to file
+import json
+with open('config/rules.json', 'w') as f:
+    json.dump(json.loads(RULES_JSON), f, indent=2)
