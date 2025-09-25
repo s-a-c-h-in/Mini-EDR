@@ -1,0 +1,17 @@
+REQUIREMENTS_TXT = """
+psutil>=5.8.0
+watchdog>=2.1.0
+flask>=2.0.0
+sqlite3
+"""
+
+# Save requirements.txt
+with open('requirements.txt', 'w') as f:
+    f.write(REQUIREMENTS_TXT)
+
+print("🛡️ Mini EDR - All scripts created successfully!")
+print("\nTo get started:")
+print("1. pip install -r requirements.txt")
+print("2. python main.py")
+print("3. Open another terminal: python dashboard/app.py")
+print("4. Visit: http://localhost:5000")
