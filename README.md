@@ -377,7 +377,7 @@ HIGH     | 12:30 | Connection to Malicious IP
 ✅ Prevents C2 communication
 ```
 
-## 🚀 Proactive vs Reactive Protection
+## Proactive vs Reactive Protection
 
 ### **Proactive (Prevention)**
 - Blocks malicious files before execution
